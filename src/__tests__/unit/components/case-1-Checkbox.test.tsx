@@ -74,5 +74,10 @@ describe('The <Checkbox /> component', () => {
 
   })
 
-  it('❌ should not fail any accessibility tests', async () => {})
+  it('❌ should not fail any accessibility tests', async () => {
+    const { container } = setupCheckbox()
+
+    expect(await axe(container)).toHaveNoViolations()
+    //toHaveNoViolations is a customed jest assertion
+  })
 })
