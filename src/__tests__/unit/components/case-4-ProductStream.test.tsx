@@ -4,7 +4,17 @@ import { render } from '@testing-library/react'
 import ProductStream from '../../../components/ProductStream'
 import ProductTile from '../../../components/ProductTile'
 
-const defaultProducts = [{
+const defaultProducts = [
+  {
+    id: 13,
+   name:'Adidas 1',
+   image: '.image.png',
+   price: 'from £12.99',
+   brand: 'Adidas',
+   createdAt: '2020-02-11 00:00:00',
+   isActive: true,
+  },  
+{
   id: 12,
   name: 'Example Product Name',
   image: './image-1.png',
@@ -13,6 +23,7 @@ const defaultProducts = [{
   createdAt: '2020-02-11 00:00:00',
   isActive: true,
 },
+
 ]
 
 describe('The <ProductStream /> component', () => {
